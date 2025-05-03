@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://color-cvc.github.io/sitemap.xml
+Sitemap: https://cic-cvc-uab.github.io/sitemap.xml
