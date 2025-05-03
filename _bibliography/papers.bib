@@ -1,115 +1,339 @@
 ---
 ---
+@String(PAMI  = {IEEE TPAMI})
+@String(IJCV  = {IJCV})
+@String(CVPR  = {CVPR})
+@String(ICCV  = {ICCV})
+@String(ECCV  = {ECCV})
+@String(NIPS  = {NeurIPS})
+@String(ICPR  = {ICPR})
+@String(BMVC  =	{BMVC})
+@String(TOG   = {ACM TOG})
+@String(TIP   = {IEEE TIP})
+@String(TVCG  = {IEEE TVCG})
+@String(TCSVT = {IEEE TCSVT})
+@String(TMM   =	{IEEE TMM})
+@String(ACMMM = {ACM MM})
+@String(ICME  =	{ICME})
+@String(ICASSP=	{ICASSP})
+@String(ICIP  = {ICIP})
+@String(ACCV  = {ACCV})
+@String(ICLR  = {ICLR})
+@String(IJCAI = {IJCAI})
+@String(PR = {PR})
+@String(AAAI = {AAAI})
+@String(CVPRW= {CVPRW})
+@String(CSVT = {IEEE TCSVT})
 
-@string{aps = {American Physical Society,}}
+@inproceedings{pilligua25,
+  bibtex_show={false},
+  abbr={CVPR},
+  title={HyperNVD: Accelerating Neural Video Decomposition via Hypernetworks},
+  author={Pilligua, Maria and Xue, Danna and Vazquez-Corral, Javier},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2025},
+  preview={cvpr25_hypernvd.png},
+  web={https://hypernvd.github.io/}
+  }
 
-@book{einstein1920relativity,
-  title={Relativity: the Special and General Theory},
-  author={Einstein, Albert},
-  year={1920},
-  publisher={Methuen & Co Ltd},
-  html={relativity.html}
+@inproceedings{gomez25,
+  bibtex_show={false},
+  abbr={CVPR},
+  title={The Art of Deception: Color Visual Illusions and Diffusion Models},
+  author={Gomez-Villa, Alex and Wang, Kai and Parraga, Alejandro C and Twardowski, Bartlomiej and Malo, Jesus and Vazquez-Corral, Javier and van de Weijer, Joost},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2025},
+  preview={cvpr25_colorillusions.png},
+  arxiv={2412.10122},
+  web={https://alviur.github.io/color-illusion-diffusion/},
+  }
+
+@inproceedings{pilligua25,
+  bibtex_show={false},
+  abbr={CVPR-W},
+  title={PromptNorm: Image Geometry Guides Ambient Light Normalization},
+  author={Serrano-Lozano, David and Molina-Bakhos, Francisco A. and Xue, Danna and Yang, Yixiong and Pilligua, Maria and Baldrich, Ramon and Vanrell, Maria and Vazquez-Corral, Javier},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition Workshops},
+  year={2025},
+  preview={cvprw25_promptnorm.png},
+  code={https://github.com/davidserra9/promptnorm}
+  }
+  
+@inproceedings{yang2025mlinerf,
+  bibtex_show={false},
+  abbr={3DV},
+  title={MLI-NeRF: Multi-Light Intrinsic-Aware Neural Radiance Fields},
+  author={Yang, Yixiong and Hu, Shilin and Wu, Haoyu and Baldrich, Ramon and Samaras, Dimitris and Vanrell, Maria},
+  booktitle={International Conference on 3D Vision},
+  year={2025},
+  preview={3dv25_mlinerf.png},
+  arxiv={2411.17235},
+  code={https://github.com/liulisixin/MLI-NeRF},
+  }
+
+@article{yang2025relighting,
+  title={Relighting from a Single Image: Datasets and Deep Intrinsic-based Architecture},
+  author={Yang, Yixiong and Sial, Hassan Ahmed and Baldrich, Ramon and Vanrell, Maria},
+  journal={IEEE Transactions on Multimedia},
+  year={2025},
+  publisher={IEEE},
+  abbr={TMM},
+  preview={tmm25_relighting.png},
+  arxiv={2409.18770},
+  paper={https://ieeexplore.ieee.org/abstract/document/10855561},
+  code={https://github.com/CVC-CIC/DeepIntrinsicRelighting},
+  dataset={/datasets/relighting_from_image/},
+  }
+
+@article{chahine2025generalized,
+  title={Generalized portrait quality assessment},
+  author={Chahine, Nicolas and Ferradans, Sira and Vazquez-Corral, Javier and Ponce, Jean},
+  journal={Pattern Recognition Letters},
+  year={2025},
+  publisher={Elsevier},
+  code={https://github.com/DXOMARK-Research/PIQ2023},
+  abbr={PRL},
+  preview={prl25_portraitqa.png},
+  arxiv={2402.09178},
+  paper={https://www.sciencedirect.com/science/article/abs/pii/S0167865525000200},
+  code={https://github.com/DXOMARK-Research/PIQ2023},
+  video={https://www.youtube.com/watch?v=cvWjOWq5wnk},
+  }
+
+@inproceedings{serrano24,
+  abbr={ECCV},
+  title={NamedCurves: Learned Image Enhancement via Color Naming},
+  author={Serrano-Lozano, David and Herranz, Luis and Brown, Michael S and Vazquez-Corral, Javier},
+  booktitle={European Conference on Computer Vision},
+  year={2024},
+  arxiv={2407.09892},
+  paper={https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08963.pdf},
+  supp={https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/08963-supp.pdf},
+  code={https://github.com/davidserra9/namedcurves},
+  demo={https://huggingface.co/spaces/davidserra9/NamedCurves},
+  web={https://namedcurves.github.io/},
+  preview={eccv24_namedcurves.png},
+  }
+
+@inproceedings{butt24,
+  abbr={ECCV},
+  title={ColorPeel: Color Prompt Learning with Diffusion Models via Color and Shape Disentanglement},
+  author={Butt, Muhammad Atif and Wang, Kai and Vazquez-Corral, Javier and van de Weijer, Joost},
+  booktitle={European Conference on Computer Vision},
+  year={2024},
+  preview={eccv24_colorpeel.png},
+  arxiv={2407.07197},
+  paper={https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01191.pdf},
+  supp={https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01191-supp.pdf},
+  web={https://moatifbutt.github.io/colorpeel/},
+  code={https://github.com/moatifbutt/color-peel},
+  dataset={https://github.com/moatifbutt/color-peel/tree/main/data/w2c_3d_data}
 }
 
-@book{einstein1956investigations,
+@inproceedings{giroux2024towards,
+  abbr={CVPR},
+  title={Towards a Perceptual Evaluation Framework for Lighting Estimation},
+  author={Giroux, Justine and Dastjerdi, Mohammad Reza Karimi and Hold-Geoffroy, Yannick and Vazquez-Corral, Javier and Lalonde, Jean-Fran{\c{c}}ois},
+  booktitle={IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  year={2024},
+  preview={cvpr24_towards.png},
+  arxiv={2312.04334},
+  paper={https://openaccess.thecvf.com/content/CVPR2024/papers/Giroux_Towards_a_Perceptual_Evaluation_Framework_for_Lighting_Estimation_CVPR_2024_paper.pdf},
+  supp={https://lvsn.github.io/PerceptionMetric/assets/supp.pdf},
+  code={https://github.com/JustineGiroux/Lightsome},
+  web={https://lvsn.github.io/PerceptionMetric/},
+  poster={https://lvsn.github.io/PerceptionMetric/assets/poster.pdf},
+  video={https://www.youtube.com/watch?v=9unjRj6uB4M},
+}
+
+
+@inproceedings{Vazquez-Corral2024a,
+  title = {NILUT: Conditional Neural Implicit 3D Lookup Tables for Image Enhancement},
+  booktitle = {AAAI Conference on Artificial Intelligence},
+  year = {2024},
+  author = {Conde, Marcos V. and Vazquez-Corral, Javier and Brown, Michael S. and Timofte, Radu},
+  abbr={AAAI},
+  preview={aaai24_nilut.png},
+  arxiv={2306.11920},
+  paper={https://ojs.aaai.org/index.php/AAAI/article/view/27901},
+  code={https://github.com/mv-lab/nilut},
+  dataset={https://www.kaggle.com/datasets/photolab/nilut-3d-lut-dataset},
+}
+
+@inproceedings{Canham_2023, 
+  title={Color in Visual-Language Models: CLIP deficiencies},
+  booktitle={Color and Imaging Conference}, 
+  author={Arias, Guillem and Baldrich, Ramon and Vanrell, Maria},
+  year={2024}, 
+  abbr={CIC},
+  preview={cic24_colorclip.png},
+  arxiv={https://arxiv.org/abs/2502.04470},
+}
+
+@article{Gil_Rodr_guez_2024, 
+  title={Color matching in the wild}, 
+  volume={154}, 
+  journal={Pattern Recognition}, 
+  author={Gil Rodri­guez, Raquel and Vazquez-Corral, Javier and Bertalmio, Marcelo and Finlayson, Graham D.}, 
+  year={2024},
+  abbr={PR},
+  preview={pr24_colorwild.png},
+  paper={https://www.sciencedirect.com/science/article/pii/S0031320324003261},
+  }
+
+@article{Xue_2024, 
+  title={Palette-Based Color Harmonization via Color Naming}, 
+  volume={31}, ISSN={1558-2361}, 
+  journal={IEEE Signal Processing Letters}, 
+  author={Xue, Danna and Vazquez-Corral, Javier and Herranz, Luis and Zhang, Yanning and Brown, Michael S.}, 
+  year={2024},
+  abbr={IEEE-SPL},
+  preview={spl24_palette.png},
+  paper={https://ieeexplore.ieee.org/abstract/document/10530999},
+  code={https://github.com/dxue321/palette-based-color-harmonization}
+  }
+
+@article{Vazquez_Corral_2024b, 
+  title={Improving the perception of low-light enhanced images}, 
+  volume={32}, 
+  number={4}, 
+  journal={Optics Express}, 
+  author={Vazquez-Corral, Javier and Finlayson, Graham D. and Herranz, Luis}, 
+  year={2024},
+  abbr={OE},
+  preview={oe24_perception.png},
+  paper={https://opg.optica.org/oe/fulltext.cfm?uri=oe-32-4-5174&id=546134},
+}
+
+@article{piella2024livercolor,
+  abbr={Diagnostics},
+  title={LiverColor: An Artificial Intelligence Platform for Liver Graft Assessment},
+  author={Piella, Gemma and Farr{\'e}, Nicolau and Esono, Daniel and Cordob{\'e}s, Miguel {\'A}ngel and Vazquez-Corral, Javier and Bilbao, Itxarone and G{\'o}mez-Gavara, Concepci{\'o}n},
+  journal={Diagnostics},
+  volume={14},
+  number={15},
+  pages={1654},
+  year={2024},
+  publisher={MDPI},
+  preview={diagnostics_livercolor.png},
+  paper={https://www.mdpi.com/2075-4418/14/15/1654},
+}
+
+
+@inproceedings{pilliguaICDARW,
+  abbr={ICDAR-W},
+  title={LayeredDoc: Domain Adaptive Document Restoration with a Layer Separation Approach},
+  author={Pilligua, Maria and Biescas, Nil and Vazquez-Corral, Javier and Llad{\'o}s, Josep and Valveny, Ernest and Biswas, Sanket},
+  booktitle={International Conference on Document Analysis and Recognition Workshops, 2024},
+  year={2024},
+  preview={icdarw24_layerdoc.png},
+  arxiv={2406.08610},
+  paper={https://link.springer.com/chapter/10.1007/978-3-031-70645-5_3},
+  web={https://layereddoc.github.io/},
+  code={https://github.com/mpilligua/LayeredDoc},
+}
+
+@article{patel2024lightness,
+  abbr={VSS},
+  title={Lightness Illusions Through AI Eyes: Assessing ConvNet and ViT Concordance with Human Perception},
+  author={Patel, Jaykishan and Flachot, Alban and Vazquez-Corral, Javier and Derpanis, Konstantinos G. and Murray, Richard},
+  journal={Journal of Vision: Vision Sciences Society (VSS)},
+  year={2024},
+  paper={https://jov.arvojournals.org/article.aspx?articleid=2801841}
+}
+
+@article{Xue_2023, 
+  abbr={CGF},
+  title={Integrating High-Level Features for Consistent Palette-based Multi-image Recoloring}, 
+  volume={42}, 
+  url={http://dx.doi.org/10.1111/cgf.14964},
+  DOI={10.1111/cgf.14964}, 
+  number={7},
+  journal={Computer Graphics Forum}, 
+  author={Xue, Danna and Vazquez-Corral, Javier and Herranz, Luis and Zhang, Yanning and Brown, Michael S.}, year={2023},
+  preview={pacgraph_integrating.png},
+  paper={https://openreview.net/pdf?id=icHknoqNMC},
+}
+
+
+@inproceedings{xue2023burst,
+  abbr={ICASSP},
+  title={Burst Perception-Distortion Tradeoff: Analysis and Evaluation},
+  author={Xue, Danna and Herranz, Luis and Vazquez-Corral, Javier and Zhang, Yanning},
+  booktitle={ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  pages={1--5},
+  year={2023},
+  organization={IEEE},
+  preview={icassp23_burst.png},
+  paper={https://ieeexplore.ieee.org/abstract/document/10096218},
+}
+
+@inproceedings{Vazquez-Corral2023b,
+  title = {Perceptual Image Enhancement for Smartphone Real-Time Applications},
+  booktitle = {IEEE Winter Conference on Applications of Computer Vision (WACV) 2023},
+  year = {2023},
+  author = {Conde, Marcos V. and Vasluianu, Florin and Vazquez-Corral, Javier and Timofte, Radu},
+  abbr={WACV},
+  preview={wacv23_perceptual.png},
+  arxiv={2210.13552},
+  paper={https://openaccess.thecvf.com/content/WACV2023/papers/Conde_Perceptual_Image_Enhancement_for_Smartphone_Real-Time_Applications_WACV_2023_paper.pdf},
+  code={https://github.com/mv-lab/AISP},
+}
+
+@inproceedings{Canham_2023, 
+  title={Noise Prism: A Novel Multispectral Visualization Technique}, 
+  url={http://dx.doi.org/10.2352/cic.2023.31.1.36}, 
+  DOI={10.2352/cic.2023.31.1.36}, 
+  booktitle={Color and Imaging Conference}, 
+  author={Canham, Trevor D. and Vazquez-Corral, Javier and Long, David L. and Murray, Richard F. and Brown, Michael S.}, 
+  year={2023}, 
+  abbr={CIC},
+  preview={cic23_noiseprism.png},
+  paper={https://library.imaging.org/cic/articles/31/1/34},
+}
+
+@inproceedings{patel2023deep,
+  abbr={VSS},
+  title={A Deep Convolutional Neural Network Trained to Infer Surface Reflectance is Deceived by Mid-Level Lightness Illusions},
+  author={Patel, Jaykishan and Flachot, Alban and Vazquez-Corral, Javier and Brainard, David H. and Wallis, Thomas S.A. and Brubaker, Marcus A. and Murray, Richard F.},
+  journal={Journal of Vision: Vision Sciences Society (VSS)},
+  year={2023},
+  paper={https://jov.arvojournals.org/article.aspx?articleid=2791685}
+}
+
+@inproceedings{yang2022image, 
+  title={Image editing of light and color from a single image: A baseline framework},
+  booktitle={Color and Imaging Conference}, 
+  author={Yang, Yixiong and Sial, Hassan Ahmed and Baldrich, Ramon and Vanrell, Maria},
+  year={2022}, 
+  abbr={CIC},
+  preview={cic22_editing.png},
+  paper={https://library.imaging.org/cic/articles/30/1/33},
+  code={https://github.com/liulisixin/ImageEditingSI},
+}
+
+ @article{Sugito_2022, 
   bibtex_show={true},
-  title={Investigations on the Theory of the Brownian Movement},
-  author={Einstein, Albert},
-  year={1956},
-  publisher={Courier Corporation},
-  preview={brownian-motion.gif}
+  abbr={IEEE-TIP},
+  title={Image Quality Evaluation in Professional HDR/WCG Production Questions the Need for HDR Metrics}, 
+  volume={31}, 
+  url={http://dx.doi.org/10.1109/TIP.2022.3190706}, 
+  DOI={10.1109/tip.2022.3190706}, 
+  journal={IEEE Transactions on Image Processing}, 
+  author={Sugito, Yasuko and Vazquez-Corral, Javier and Canham, Trevor and Bertalmio, Marcelo}, 
+  year={2022},
+  preview={tip23_imagequality.png},
+  paper={https://ieeexplore.ieee.org/document/9833382},
 }
 
-@article{einstein1950meaning,
-  abbr={AJP},
-  bibtex_show={true},
-  title={The meaning of relativity},
-  author={Einstein, Albert and Taub, AH},
-  journal={American Journal of Physics},
-  volume={18},
-  number={6},
-  pages={403--404},
-  year={1950},
-  publisher={American Association of Physics Teachers}
-}
-
-@article{PhysRev.47.777,
-  abbr={PhysRev},
-  title={Can Quantum-Mechanical Description of Physical Reality Be Considered Complete?},
-  author={Einstein*†, A. and Podolsky*, B. and Rosen*, N.},
-  abstract={In a complete theory there is an element corresponding to each element of reality. A sufficient condition for the reality of a physical quantity is the possibility of predicting it with certainty, without disturbing the system. In quantum mechanics in the case of two physical quantities described by non-commuting operators, the knowledge of one precludes the knowledge of the other. Then either (1) the description of reality given by the wave function in quantum mechanics is not complete or (2) these two quantities cannot have simultaneous reality. Consideration of the problem of making predictions concerning a system on the basis of measurements made on another system that had previously interacted with it leads to the result that if (1) is false then (2) is also false. One is thus led to conclude that the description of reality as given by a wave function is not complete.},
-  journal={Phys. Rev.},
-  location={New Jersey},
-  volume={47},
-  issue={10},
-  pages={777--780},
-  numpages={0},
-  year={1935},
-  month={May},
-  publisher=aps,
-  doi={10.1103/PhysRev.47.777},
-  url={http://link.aps.org/doi/10.1103/PhysRev.47.777},
-  html={https://journals.aps.org/pr/abstract/10.1103/PhysRev.47.777},
-  pdf={example_pdf.pdf},
-  altmetric={248277},
-  dimensions={true},
-  google_scholar_id={qyhmnyLat1gC},
-  video={https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ},
-  additional_info={. *More Information* can be [found here](https://github.com/alshedivat/al-folio/)},
-  annotation={* Example use of superscripts<br>† Albert Einstein},
-  selected={true},
-  inspirehep_id = {3255}
-}
-
-@article{einstein1905molekularkinetischen,
-  title={{\"U}ber die von der molekularkinetischen Theorie der W{\"a}rme geforderte Bewegung von in ruhenden Fl{\"u}ssigkeiten suspendierten Teilchen},
-  author={Einstein, A.},
-  journal={Annalen der physik},
-  volume={322},
-  number={8},
-  pages={549--560},
-  year={1905},
-  publisher={Wiley Online Library}
-}
-
-@article{einstein1905movement,
-  abbr={Ann. Phys.},
-  title={Un the movement of small particles suspended in statiunary liquids required by the molecular-kinetic theory 0f heat},
-  author={Einstein, A.},
-  journal={Ann. Phys.},
-  volume={17},
-  pages={549--560},
-  year={1905}
-}
-
-@article{einstein1905electrodynamics,
-  title={On the electrodynamics of moving bodies},
-  author={Einstein, A.},
-  year={1905}
-}
-
-@Article{einstein1905photoelectriceffect,
-  bibtex_show={true},
-  abbr={Ann. Phys.},
-  title="{{\"U}ber einen die Erzeugung und Verwandlung des Lichtes betreffenden heuristischen Gesichtspunkt}",
-  author={Albert Einstein},
-  abstract={This is the abstract text.},
-  journal={Ann. Phys.},
-  volume={322},
-  number={6},
-  pages={132--148},
-  year={1905},
-  doi={10.1002/andp.19053220607},
-  award={Albert Einstein receveid the **Nobel Prize in Physics** 1921 *for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect*},
-  award_name={Nobel Prize}
-}
-
-@book{przibram1967letters,
-  bibtex_show={true},
-  title={Letters on wave mechanics},
-  author={Einstein, Albert and Schrödinger, Erwin and Planck, Max and Lorentz, Hendrik Antoon and Przibram, Karl},
-  year={1967},
-  publisher={Vision},
-  preview={wave-mechanics.gif},
-  abbr={Vision}
+@article{Vazquez-Corral2022,
+  title = {On the synthesis of visual illusions using deep generative models},
+  journal = {Journal of Vision},
+  year = {2022},
+  volume = {22},
+  number = {8},
+  author = {Gomez-Villa, Alex and Mart{\'i}n, Adr{\'i}an and Vazquez-Corral, Javier and Bertalm{\'i}o, Marcelo and Malo, Jes{\'u}s},
+  abbr={JOV},
+  preview={jov23_synthesis.png},
+  paper={https://jov.arvojournals.org/article.aspx?articleid=2783481}
 }

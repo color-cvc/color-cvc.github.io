@@ -1,0 +1,41 @@
+faculty:
+  - full_name: Javier Vazquez-Corral
+    contact: "jvazquez [at] cvc [dot] uab [dot] cat"
+    personal_website: https://jvazquezcorral.github.io/
+    image: javier_vazquez.jpg
+  - full_name: Maria Vanrell
+    contact: "maria [at] cvc [dot] uab [dot] cat"
+    personal_website: http://www.cat.uab.cat/~maria/
+    image: maria_vanrell.jpg
+  - full_name: Ramon Baldrich
+    contact: "ramon [dot] cvc [at] uab [dot] cat"
+    image: ramon_baldrich.jpg
+
+postdoc_researchers:
+  - full_name: Danna Xue
+    contact: "dxue [at] cvc [dot] uab [dot] cat"
+    personal_website: https://dxue321.github.io/
+    image: danna_xue.jpg
+  - full_name: Shaolin Su
+    contact: "shaolin [at] cvc [dot] uab [dot] cat"
+    image: shaolin_su.jpg
+
+phd_students:
+  - full_name: Guillem Arias
+    contact: "garias [at] cvc [dot] uab [dot] cat"
+    image: guillem_arias.jpg
+  - full_name: David Serrano-Lozano
+    contact: "dserrano [at] cvc [dot] uab [dot] cat"
+    personal_website: https://davidserrano.github.io/
+    image: david_serrano.jpg
+  - full_name: Xuanshuo Fu
+    contact: "xuanshuo [at] cvc [dot] uab [dot] cat"
+
+undergrad_students:
+  - full_name: Maria Pilligua
+    contact: "mpilligua [at] cvc [dot] uab [dot] cat"
+    personal_website: https://mpilligua.github.io/
+    image: maria_pilligua.jpg
+  - full_name: Josep M. Rocafort
+    contact: "jmrocafort [at] cvc [dot] uab [dot] cat" 
+    image: josep_rocafort.jpg

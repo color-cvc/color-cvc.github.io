@@ -1,0 +1,46 @@
+/* Navigation Bar */
+.nav-color-checker {
+    display: flex;
+    gap: 10px; /* Space between squares */
+  }
+  
+  .nav-color-checker .nav-item {
+    margin: 0;
+  }
+  
+  .nav-color-checker .nav-link {
+    display: block;
+    width: 50px; /* Square size */
+    height: 50px; /* Square size */
+    text-align: center;
+    line-height: 50px; /* Vertically align text */
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  /* Assign colors to squares */
+  .nav-color-checker .nav-item:nth-child(1) .nav-link {
+    background-color: #ff5733; /* Color for About */
+  }
+  
+  .nav-color-checker .nav-item:nth-child(2) .nav-link {
+    background-color: #33c3ff; /* Color for Team */
+  }
+  
+  .nav-color-checker .nav-item:nth-child(3) .nav-link {
+    background-color: #75ff33; /* Color for Contact */
+  }
+  
+  /* Hover effect */
+  .nav-color-checker .nav-link:hover {
+    opacity: 0.8;
+  }
+  
+  /* Active item styling */
+  .nav-color-checker .active .nav-link {
+    border: 2px solid #000; /* Highlight active square */
+  }
+  
