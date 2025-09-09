@@ -246,7 +246,7 @@ ul.task-list input[type="checkbox"] {
 .navbar {
   box-shadow: none;
   border-bottom: 1px solid var(--global-divider-color);
-  background-color: #9c1f31; // var(--global-bg-color);
+  background-color: #ff2a19; // var(--global-bg-color);
   opacity: 0.95;
 
   a, .navbar-brand, .nav-link {
@@ -364,8 +364,9 @@ ul.task-list input[type="checkbox"] {
 }
 
 .navbar-brand-logo img {
-  height: 30px;
+  height: 20px;
   width: auto;
+  margin-left: 5px;
 }
 
 .navbar-brand.custom-brand {

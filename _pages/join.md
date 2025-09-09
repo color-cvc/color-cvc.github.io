@@ -50,7 +50,7 @@ If you are enrolled in a related program at another university, you may be eligi
 #### 📍 Life at the CVC and in Barcelona
 The Computer Vision Center is more than just a research institute, it’s a dynamic, collaborative community located in Barcelona, Spain, one of Europe’s most vibrant and culturally rich cities.
 
-With a population of 1.5 million, [Barcelona](https://www.barcelona.cat/en) is known for its architectural heritage, world-class cuisine, beaches, and sports culture. It’s an inspiring setting for both living and conducting research.
+With a population of 1.7 million, [Barcelona](https://www.barcelona.cat/en) is known for its architectural heritage, world-class cuisine, beaches, and sports culture. It’s an inspiring setting for both living and conducting research.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">

@@ -8,7 +8,7 @@ contact_note: >
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   The Color Group @ Computer Vision Center (CVC) is a research group at the Universitat Autònoma de Barcelona (UAB) that focuses on computer vision and machine learning.
 footer_text: >
-  The webpage is based on the <a href="al-folio.github.io">al-folio</a> theme.
+  The webpage is based on the <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 keywords: Color Group, Computer Vision Center, Barcelona # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: prism.jpg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
