@@ -3,7 +3,7 @@
 # -----------------------------------------------------------------------------
 
 title: blank # the website title (if blank, full name will be used instead)
-first_name: Color Group
+first_name: Color Group @ CVC
 contact_note: >
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   The Color Group @ Computer Vision Center (CVC) is a research group at the Universitat Autònoma de Barcelona (UAB) that focuses on computer vision and machine learning.

@@ -23,3 +23,126 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-filled.scss",
   "tabler-icons/tabler-icons-outline.scss"
 ;
+
+// 👇 Custom font override
+@font-face {
+  font-family: 'Monoska';
+  src: url('/assets/fonts/monoska.woff2') format('woff2'),
+       url('/assets/fonts/monoska.woff') format('woff'),
+       url('/assets/fonts/monoska.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+h1, h2, h3, h4, h5, h6, .navbar-brand {
+  font-family: 'Monoska', sans-serif;
+}
+
+/* Post headers */
+.post-header {
+  text-align: center;
+}
+
+.post-header .post-title {
+  margin-bottom: 0.25em;
+}
+
+.post-header .post-description {
+  font-style: italic;
+  color: var(--text-muted);
+}
+/* Card base */
+.person-card {
+  text-align: center;
+  background: var(--background-alt, #f8f9fa);
+  border-radius: 12px;
+  padding: 1rem;
+  max-width: 220px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  transition: transform .2s ease, box-shadow .2s ease;
+  display: block;          /* so <a> behaves like a div */
+  text-decoration: none;   /* remove underline if it's an <a> */
+  color: inherit;          /* text stays normal */
+}
+
+/* Hover effect ONLY for cards with links */
+.person-card.has-link:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  cursor: pointer;
+}
+
+/* Image */
+.person-card img {
+  width: 100%;
+  max-width: 180px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 auto .75rem;
+  display: block;
+}
+
+/* Headings */
+.person-card h6 {
+  margin: .25rem 0;
+}
+
+/* Names */
+.person-card .first-name,
+.person-card .last-name {
+  display: block;
+  line-height: 1.2;
+  color: var(--global-text-color);
+  font-weight: 600;
+}
+
+/* Position */
+.person-card .position {
+  font-style: italic;
+  color: var(--text-muted);
+}
+
+/* Email */
+.person-card .email {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  word-break: break-word;
+}
+
+/* Grid */
+.people-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  justify-items: center;
+  margin-top: 2rem;
+}
+
+/* Container */
+.team-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Linked cards: make all text red without underline */
+.person-card.has-link {
+  text-decoration: none;          /* remove underline */
+  color: var(--global-theme-color); /* make all text red */
+}
+
+// .person-card.has-link:hover {
+//   transform: translateY(-4px);
+//   box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+//   cursor: pointer;
+//   color: var(--global-hover-color); /* slightly darker red on hover */
+// }
+
+/* Ensure child elements don’t reset the color */
+.person-card.has-link h6,
+.person-card.has-link p,
+.person-card.has-link span {
+  color: inherit;        /* inherit red from parent */
+  text-decoration: none; /* never underline */
+}

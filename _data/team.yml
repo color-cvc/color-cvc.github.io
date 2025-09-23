@@ -1,41 +1,99 @@
-faculty:
-  - full_name: Javier Vazquez-Corral
-    contact: "jvazquez@cvc.uab.cat"
+current:
+  - first_name: Javier
+    last_name: Vazquez-Corral
+    position: Professor
     personal_website: https://jvazquezcorral.github.io/
     image: javier_vazquez.jpg
-  - full_name: Maria Vanrell
-    contact: "maria@cvc.uab.cat"
+
+  - first_name: Maria
+    last_name: Vanrell
+    position: Professor
     personal_website: http://www.cat.uab.cat/~maria/
     image: maria_vanrell.jpg
-  - full_name: Ramon Baldrich
-    contact: "ramon@cvc.uab.cat"
+
+  - first_name: Ramon
+    last_name: Baldrich
+    position: Professor
     image: ramon_baldrich.jpg
 
-postdoc_researchers:
-  - full_name: Danna Xue
-    contact: "dxue@cvc.uab.cat"
+  - first_name: Danna
+    last_name: Xue
+    position: Postdoc
     personal_website: https://dxue321.github.io/
     image: danna_xue.jpg
-  - full_name: Shaolin Su
-    contact: "shaolin@cvc.uab.cat"
+
+  - first_name: Shaolin
+    last_name: Su
+    position: Postdoc
     image: shaolin_su.jpg
 
-phd_students:
-  - full_name: Guillem Arias
-    contact: "garias@cvc.uab.cat"
+  - first_name: Guillem
+    last_name: Arias
+    position: PhD Student
     image: guillem_arias.jpg
-  - full_name: David Serrano-Lozano
-    contact: "dserrano@cvc.uab.cat"
+
+  - first_name: David
+    last_name: Serrano-Lozano
+    position: PhD Student
     personal_website: https://davidserra9.github.io/
     image: david_serrano.jpg
-  - full_name: Xuanshuo Fu
-    contact: "xuanshuo@cvc.uab.cat"
 
-undergrad_students:
-  - full_name: Maria Pilligua
-    contact: "mpilligua@cvc.uab.cat"
+  - first_name: Xuanshuo
+    last_name: Fu
+    position: PhD Student
+    email: xuanshuo[at]cvc.uab.cat
+
+  - first_name: Luca
+    last_name: Cogo
+    position: Visiting Student
+    personal_website: https://lucacogo.github.io/
+
+  - first_name: Z.
+    last_name: Xu
+    position: Visiting Student
+
+  - first_name: Héctor
+    last_name: Salguero
+    position: Undergraduate
+
+  - first_name: David
+    last_name: Piera
+    position: Undergraduate
+
+phd_alumni:
+  - first_name: Danna
+    last_name: Xue
+    position: PhD 
+    year: 2022-2024
+    moved_to: Postdoc at our group!
+    personal_website: https://dxue321.github.io/
+
+  - first_name: Yixiong
+    last_name: Yang
+    position: PhD 
+    year: 2019-2024
+    moved_to: Postdoc at X
+
+other_alumni:
+  - first_name: Maria
+    last_name: Pilligua
+    position: Undergrad itern 
+    year: 2022-2025
+    moved_to: MSc at EPFL
     personal_website: https://mpilligua.github.io/
-    image: maria_pilligua.jpg
-  - full_name: Josep M. Rocafort
-    contact: "jmrocafort@cvc.uab.cat" 
-    image: josep_rocafort.jpg
+
+  - first_name: Josep M.
+    last_name: Rocafort
+    position: Undergrad intern 
+    year: 2024-2025
+
+  - first_name: Abril
+    last_name: Piñol
+    position: MSc intern
+    year: 2024-2025
+
+  - first_name: Adrián
+    last_name: García
+    position: Undergraduate intern
+    year: 2024-2025
+    moved_to: MSc at École Polytechnique

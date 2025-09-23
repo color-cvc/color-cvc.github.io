@@ -1,117 +1,42 @@
 ---
 layout: page
+title: "Team"
 permalink: /team/
-title: Team
 nav: true
 nav_order: 2
 ---
 
-<style>
-.team-member {
-  display: flex;
-  align-items: center;
-  margin-bottom: 20px;
-}
+<div class="team-container">
+  <div class="people-grid">
+    {% for person in site.data.team.current %}
+      {% if person.personal_website %}
+        <a href="{{ person.personal_website }}" target="_blank" rel="noopener" class="person-card has-link">
+      {% else %}
+        <div class="person-card">
+      {% endif %}
 
-.team-member img {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  margin-right: 15px;
-  object-fit: cover;
-}
+        {% if person.image %}
+          <img src="{{ '/assets/img/team/' | append: person.image | relative_url }}" alt="{{ person.first_name }} {{ person.last_name }}">
+        {% else %}
+          <img src="{{ '/assets/img/team/default_image.jpg' | relative_url }}" alt="{{ person.first_name }} {{ person.last_name }}">
+        {% endif %}
 
-.team-member-info {
-  flex: 1;
-}
-</style>
+        <h6 class="person-name">
+          <span class="first-name">{{ person.first_name }}</span>
+          <span class="last-name">{{ person.last_name }}</span>
+        </h6>
 
-{% assign faculty = site.data.team.faculty %}
-{% assign postdocs = site.data.team.postdoc_researchers %}
-{% assign phd_students = site.data.team.phd_students %}
-{% assign undergrad_students = site.data.team.undergrad_students %}
-{% assign alumni = site.data.team.alumni %}
+        <h6 class="position">{{ person.position }}</h6>
 
-<hr>
+        {% if person.email %}
+          <p class="email">{{ person.email }}</p>
+        {% endif %}
 
-## Faculty
-
-{% for member in faculty %}
-<div class="team-member">
-  {% if member.image %}
-    <img src="{{ '/assets/img/team/' | append: member.image | relative_url }}" alt="{{ member.full_name }}">
-  {% else %}
-    <img src="/assets/img/team/default_image.jpg" alt="Default Profile Picture">
-  {% endif %}
-  
-  <div class="team-member-info">
-    <p><strong>Full name:</strong> {{ member.full_name }}</p>
-    {% if member.contact %}<p><strong>Contact:</strong> {{ member.contact }}</p>{% endif %}
-    {% if member.personal_website %}<p><strong>Personal Website:</strong> <a href="{{ member.personal_website }}">{{ member.personal_website }}</a></p>{% endif %}
-    {% if member.google_scholar %}<p><strong>Google Scholar:</strong> <a href="{{ member.google_scholar }}">{{ member.google_scholar }}</a></p>{% endif %}
+      {% if person.personal_website %}
+        </a>
+      {% else %}
+        </div>
+      {% endif %}
+    {% endfor %}
   </div>
 </div>
-{% endfor %}
-
-<hr>
-
-## Postdoctoral Researchers
-
-{% for member in postdocs %}
-<div class="team-member">
-  {% if member.image %}
-    <img src="{{ '/assets/img/team/' | append: member.image | relative_url }}" alt="{{ member.full_name }}">
-  {% else %}
-    <img src="/assets/img/team/default_image.jpg" alt="Default Profile Picture">
-  {% endif %}
-  
-  <div class="team-member-info">
-    <p><strong>Full name:</strong> {{ member.full_name }}</p>
-    {% if member.contact %}<p><strong>Contact:</strong> {{ member.contact }}</p>{% endif %}
-    {% if member.personal_website %}<p><strong>Personal Website:</strong> <a href="{{ member.personal_website }}">{{ member.personal_website }}</a></p>{% endif %}
-    {% if member.google_scholar %}<p><strong>Google Scholar:</strong> <a href="{{ member.google_scholar }}">{{ member.google_scholar }}</a></p>{% endif %}
-  </div>
-</div>
-{% endfor %}
-
-<hr>
-
-## Ph.D. Students
-
-{% for member in phd_students %}
-<div class="team-member">
-  {% if member.image %}
-    <img src="{{ '/assets/img/team/' | append: member.image | relative_url }}" alt="{{ member.full_name }}">
-  {% else %}
-    <img src="/assets/img/team/default_image.jpg" alt="Default Profile Picture">
-  {% endif %}
-  
-  <div class="team-member-info">
-    <p><strong>Full name:</strong> {{ member.full_name }}</p>
-    {% if member.contact %}<p><strong>Contact:</strong> {{ member.contact }}</p>{% endif %}
-    {% if member.personal_website %}<p><strong>Personal Website:</strong> <a href="{{ member.personal_website }}">{{ member.personal_website }}</a></p>{% endif %}
-    {% if member.google_scholar %}<p><strong>Google Scholar:</strong> <a href="{{ member.google_scholar }}">{{ member.google_scholar }}</a></p>{% endif %}
-  </div>
-</div>
-{% endfor %}
-
-<hr>
-
-## Master and Bachelor Students
-
-{% for member in undergrad_students %}
-<div class="team-member">
-  {% if member.image %}
-    <img src="{{ '/assets/img/team/' | append: member.image | relative_url }}" alt="{{ member.full_name }}">
-  {% else %}
-    <img src="/assets/img/team/default_image.jpg" alt="Default Profile Picture">
-  {% endif %}
-  
-  <div class="team-member-info">
-    <p><strong>Full name:</strong> {{ member.full_name }}</p>
-    {% if member.contact %}<p><strong>Contact:</strong> {{ member.contact }}</p>{% endif %}
-    {% if member.personal_website %}<p><strong>Personal Website:</strong> <a href="{{ member.personal_website }}">{{ member.personal_website }}</a></p>{% endif %}
-    {% if member.google_scholar %}<p><strong>Google Scholar:</strong> <a href="{{ member.google_scholar }}">{{ member.google_scholar }}</a></p>{% endif %}
-  </div>
-</div>
-{% endfor %}
