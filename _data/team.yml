@@ -41,15 +41,18 @@ current:
   - first_name: Xuanshuo
     last_name: Fu
     position: PhD Student
-    email: xuanshuo[at]cvc.uab.cat
+
+  - first_name: Abril
+    last_name: Piñol
+    position: MSc Student
 
   - first_name: Luca
     last_name: Cogo
     position: Visiting Student
     personal_website: https://lucacogo.github.io/
 
-  - first_name: Z.
-    last_name: Xu
+  - first_name: Youchen
+    last_name: Liu
     position: Visiting Student
 
   - first_name: Héctor
@@ -57,7 +60,7 @@ current:
     position: Undergraduate
 
   - first_name: David
-    last_name: Piera
+    last_name: Pujol
     position: Undergraduate
 
 phd_alumni:
