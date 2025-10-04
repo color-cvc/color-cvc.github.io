@@ -76,6 +76,11 @@ ninja.data = [{
           description: "Relighting from a Single Image. Datasets and Deep Intrinsic-based Architecture",
           section: "Datasets",handler: () => {
               window.location.href = "/datasets/relighting_from_image/";
+            },},{id: "datasets-srgb-lsmi",
+          title: 'sRGB-LSMI',
+          description: "Revisiting Image Fusion for Multi-Illuminant White-Balance Correction",
+          section: "Datasets",handler: () => {
+              window.location.href = "/datasets/revisitingmiwb/";
             },},{id: "news-relighting-from-a-single-image-datasets-and-deep-intrinsic-based-architecture-has-been-accepted-in-ieee-transactions-on-multimedia",
           title: 'Relighting from a Single Image: Datasets and Deep Intrinsic-based Architecture has been accepted...',
           description: "",
