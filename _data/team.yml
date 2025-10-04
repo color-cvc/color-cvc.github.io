@@ -41,15 +41,18 @@ current:
   - first_name: Xuanshuo
     last_name: Fu
     position: PhD Student
+    image: xuanshuo_fu.jpg
 
   - first_name: Abril
     last_name: Piñol
     position: MSc Student
+    image: abril_pinol.jpg
 
   - first_name: Luca
     last_name: Cogo
     position: Visiting Student
     personal_website: https://lucacogo.github.io/
+    image: luca_cogo.jpg
 
   - first_name: Youchen
     last_name: Liu
@@ -58,6 +61,7 @@ current:
   - first_name: Héctor
     last_name: Salguero
     position: Undergraduate
+    image: hector_salguero.jpg
 
   - first_name: David
     last_name: Pujol
