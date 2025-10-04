@@ -2,7 +2,7 @@
 layout: page
 title: sRGB-LSMI
 description: Revisiting Image Fusion for Multi-Illuminant White-Balance Correction
-img: assets/img/datasets/relighting-single-image/teaser.gif
+img: assets/img/datasets/revisitingmiwb/iccv25_revisitingmiwb.jpg
 importance: 1
 category: work
 related_publications: true
@@ -12,7 +12,7 @@ White balance (WB) correction in scenes with multiple illuminants remains a pers
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/datasets/relighting-single-image/IRS.png" title="ISR dataset" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/datasets/revisitingmiwb/iccv25_revisitingmiwb.jpg" title="sRGB-LSMI dataset" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
@@ -23,7 +23,7 @@ We repurpose the Sony and Nikon splits of the [LSMI dataset](https://www.dykim.m
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.liquid loading="eager" path="assets/img/datasets/relighting-single-image/IRS.png" title="ISR dataset" class="img-fluid rounded z-depth-1" %}
+        {% include figure.liquid loading="eager" path="assets/img/datasets/revisitingmiwb/dataset_creation.jpg" title="GT creation" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
 <div class="caption">
