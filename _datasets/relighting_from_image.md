@@ -24,7 +24,7 @@ intrinsic components in the grount truth. The ISR has 7801 scenes, each one unde
     Illustrations of some examples from the dataset, showing the images along with their corresponding reflectances and shading. We also show the coordinate system employed in the dataset, which includes the pan and tilt.
 </div>
 
-The dataset can be downloaded separately by: [Reflectance](https://cvcuab-my.sharepoint.com/personal/yixiong_cvc_uab_cat/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyixiong%5Fcvc%5Fuab%5Fcat%2FDocuments%2FDeepIntrinsicRelighting%2FISR%5Frelease%2FReflectance%2Ezip&parent=%2Fpersonal%2Fyixiong%5Fcvc%5Fuab%5Fcat%2FDocuments%2FDeepIntrinsicRelighting%2FISR%5Frelease&ga=1), [Shading](https://cvcuab-my.sharepoint.com/personal/yixiong_cvc_uab_cat/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyixiong%5Fcvc%5Fuab%5Fcat%2FDocuments%2FDeepIntrinsicRelighting%2FISR%5Frelease%2FShading%2Ezip&parent=%2Fpersonal%2Fyixiong%5Fcvc%5Fuab%5Fcat%2FDocuments%2FDeepIntrinsicRelighting%2FISR%5Frelease&ga=1) and [Images](https://cvcuab-my.sharepoint.com/personal/yixiong_cvc_uab_cat/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyixiong%5Fcvc%5Fuab%5Fcat%2FDocuments%2FDeepIntrinsicRelighting%2FISR%5Frelease%2FImage%2Ezip&parent=%2Fpersonal%2Fyixiong%5Fcvc%5Fuab%5Fcat%2FDocuments%2FDeepIntrinsicRelighting%2FISR%5Frelease&ga=1). You can download only the Reflectance and Shading, as the image can be calculated from them in the code. **Note**: The name of the picture is: `{Index of scene (part 1)}_{Index of scene (part 2)}_{pan}_{tilt}_{light temperature}_{not use}`. The first two numbers represent the scene ID, while pan, tilt, and light temperature represent the lighting parameters.
+The dataset can be downloaded separately by: [Reflectance](https://cvcuab-my.sharepoint.com/personal/yixiong_cvc_uab_cat/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyixiong%5Fcvc%5Fuab%5Fcat%2FDocuments%2FDeepIntrinsicRelighting%2FISR%5Frelease%2FReflectance%2Ezip&parent=%2Fpersonal%2Fyixiong%5Fcvc%5Fuab%5Fcat%2FDocuments%2FDeepIntrinsicRelighting%2FISR%5Frelease&ga=1), [Shading](https://cvcuab-my.sharepoint.com/personal/yixiong_cvc_uab_cat/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyixiong%5Fcvc%5Fuab%5Fcat%2FDocuments%2FDeepIntrinsicRelighting%2FISR%5Frelease%2FShading%2Ezip&parent=%2Fpersonal%2Fyixiong%5Fcvc%5Fuab%5Fcat%2FDocuments%2FDeepIntrinsicRelighting%2FISR%5Frelease&ga=1) and [Images](https://cvcuab-my.sharepoint.com/personal/yixiong_cvc_uab_cat/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyixiong%5Fcvc%5Fuab%5Fcat%2FDocuments%2FDeepIntrinsicRelighting%2FISR%5Frelease%2FImage%2Ezip&parent=%2Fpersonal%2Fyixiong%5Fcvc%5Fuab%5Fcat%2FDocuments%2FDeepIntrinsicRelighting%2FISR%5Frelease&ga=1). You can download only the Reflectance and Shading, as the image can be calculated from them in the code. **Note**: The name of the picture is: {Index of scene (part 1)}_{Index of scene (part 2)}_{pan}_{tilt}_{light temperature}_{not use}. The first two numbers represent the scene ID, while pan, tilt, and light temperature represent the lighting parameters.
 
 ### RSR: Real scene relighting dataset
 
@@ -43,21 +43,10 @@ The dataset with original resolution can be downloaded [here](https://cvcuab-my.
 
 The dataset with 256x256 resolution can be downloaded [here](https://cvcuab-my.sharepoint.com/personal/yixiong_cvc_uab_cat/_layouts/15/onedrive.aspx?id=%2Fpersonal%2Fyixiong%5Fcvc%5Fuab%5Fcat%2FDocuments%2FDeepIntrinsicRelighting%2FRSR%5F256%2Ezip&parent=%2Fpersonal%2Fyixiong%5Fcvc%5Fuab%5Fcat%2FDocuments%2FDeepIntrinsicRelighting&ga=1).
 
-**Note**: 1) The name of the picture is: `{index of picture}_{index of group (different scene or different view)}_{pan}_{tilt}_{R}_{G}_{B}_{index of scene}_{not use}_{index of view}_{index of light position}`. The quantities that need attention are pan, tilt, and color (RGB), which represent the parameters of the light. 2) The order of the lights are as follow:
+**Note**: 1) The name of the picture is: {index of picture}_{index of group (different scene or different view)}_{pan}_{tilt}_{R}_{G}_{B}_{index of scene}_{not use}_{index of view}_{index of light position}. The quantities that need attention are pan, tilt, and color (RGB), which represent the parameters of the light. 2) The order of the lights are as follow:
 
 |  5  |  4  |  3  |
 | --- | --- | --- |
 |  **6**  |  **1**  |  **2**  |
 |  **7**  |  **8**  |  **9**  |
-
-### Results
-
-Now, we show some result examples of our proposed method. For more details, please check our <a href='https://arxiv.org/abs/2409.18770'>paper</a> and <a href='https://github.com/CVC-CIC/DeepIntrinsicRelighting'>GitHub repo</a>.
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include video.liquid loading="eager" path="assets/img/datasets/relighting-single-image/result1.mp4" title="Our method's result." class="img-fluid rounded z-depth-1" %}
-        {% include video.liquid loading="eager" path="assets/img/datasets/relighting-single-image/result1.mp4" title="Our method's result." class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
 
