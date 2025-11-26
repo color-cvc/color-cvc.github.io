@@ -1,4 +1,4 @@
-# al-folio
+# Color Group
 
 <div align="center">
 
