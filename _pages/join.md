@@ -48,14 +48,24 @@ How to apply and more information is available on the [internships program websi
 If you are enrolled in a related program at another university, you may be eligible to visit the Color Group for a short-term research stay. These visits are a great opportunity to experience a different research environment and enjoy the city of Barcelona. Interested students should contact a faculty member directly.
 
 #### 📍 Life at the CVC and in Barcelona
-The Computer Vision Center is more than just a research institute, it’s a dynamic, collaborative community located in Barcelona, Spain, one of Europe’s most vibrant and culturally rich cities.
+The Computer Vision Center is more than just a research institute, it's a dynamic, collaborative community located in Barcelona, Spain, one of Europe's most vibrant and culturally rich cities.
 
-With a population of 1.7 million, [Barcelona](https://www.barcelona.cat/en) is known for its architectural heritage, world-class cuisine, beaches, and sports culture. It’s an inspiring setting for both living and conducting research.
+With a population of 1.7 million, [Barcelona](https://www.barcelona.cat/en) is known for its architectural heritage, world-class cuisine, beaches, and sports culture. It's an inspiring setting for both living and conducting research.
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
         {% include figure.liquid loading="eager" path="assets/img/barcelona.jpg" title="Barcelona" class="img-fluid rounded z-depth-1" %}
     </div>
+</div>
+
+#### 👥 Our Team
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.liquid loading="eager" path="assets/img/group_pic.jpg" title="Color Group Team" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
+<div class="caption">
+    The Color Group team at the Computer Vision Center
 </div>
 
 

@@ -762,6 +762,12 @@ footer.sticky-bottom {
 
     li {
       margin-bottom: 1rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--global-divider-color, #e0e0e0);
+
+      &:last-child {
+        border-bottom: none;
+      }
 
       .preview {
       }
@@ -790,11 +796,37 @@ footer.sticky-bottom {
         }
       }
 
+      .periodical {
+        abbr.badge {
+          display: inline-block;
+          background-color: var(--global-theme-color);
+          color: var(--global-card-bg-color) !important;
+          padding: 0.25rem 0.5rem;
+          margin-right: 0.5rem;
+          font-size: 0.85rem;
+          font-weight: 600;
+          border-radius: 0.25rem;
+
+          a {
+            color: white;
+
+            &:hover {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+
       .title {
         font-weight: bolder;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
       }
 
       .author {
+        font-size: 0.95rem;
+
         a {
           border-bottom: 1px dashed var(--global-theme-color);
 
@@ -901,6 +933,82 @@ footer.sticky-bottom {
     }
     div.award.hidden.open {
       border-color: var(--global-highlight-color);
+    }
+  }
+}
+
+// Datasets Section (styled like publications)
+.datasets {
+  margin-top: 2rem;
+
+  ol.dataset-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+
+    li.dataset-item {
+      margin-bottom: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--global-divider-color, #e0e0e0);
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .title {
+        font-weight: bolder;
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.4;
+
+        a {
+          color: var(--global-text-color);
+          text-decoration: none;
+
+          &:hover {
+            color: var(--global-theme-color);
+          }
+        }
+      }
+
+      .description {
+        font-size: 0.95rem;
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+      }
+
+      .links {
+        a.btn {
+          color: var(--global-text-color);
+          border: 1px solid var(--global-text-color);
+          padding-left: 1rem;
+          padding-right: 1rem;
+          padding-top: 0.25rem;
+          padding-bottom: 0.25rem;
+          margin-left: 0;
+          margin-right: 0.5rem;
+
+          &:hover {
+            color: var(--global-theme-color);
+            border-color: var(--global-theme-color);
+          }
+
+          i {
+            margin-right: 0.25rem;
+          }
+        }
+      }
+
+      .dataset-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.2s ease;
+
+        &:hover {
+          transform: scale(1.02);
+        }
+      }
     }
   }
 }

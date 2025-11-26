@@ -147,6 +147,9 @@ collections:
     output: true
   projects:
     output: true
+  project_pages:
+    output: true
+    permalink: /:title/
   datasets:
     output: true
 

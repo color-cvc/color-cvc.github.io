@@ -1,3 +1,4 @@
+
 current:
   - first_name: Javier
     last_name: Vazquez-Corral
@@ -48,6 +49,12 @@ current:
     position: PhD Student
     image: abril_pinol.jpg
 
+  - first_name: Alexandra
+    last_name: Gomez-Villa
+    position: Collaborator
+    personal_website: https://sites.google.com/view/alex-gomez-villa/home?authuser=1
+    image: alex_gomez.jpg
+
   - first_name: Luca
     last_name: Cogo
     position: Visiting Student
@@ -71,42 +78,115 @@ current:
 phd_alumni:
   - first_name: Danna
     last_name: Xue
-    position: PhD 
-    year: 2022-2024
+    position: PhD
+    year: 2024
     thesis_title: On Considering Semantics for Multi-image Processing
     moved_to: Postdoc in our group!
     personal_website: https://dxue321.github.io/
 
   - first_name: Yixiong
     last_name: Yang
-    position: PhD 
-    year: 2019-2024
+    position: PhD
+    year: 2024
     thesis_title: Understanding and Editing Light in Images
-    moved_to: Postdoc at Harbin Institute of Technology (Shenzhen, China)
+    moved_to: Postdoc at Harbin Institute of Technology
+    personal_website: https://www.linkedin.com/in/yixiong-yang/?originalSubdomain=es
+
+  - first_name: Hassan A.
+    last_name: Sial
+    position: PhD
+    year: 2021
+    thesis_title: "Estimating Light Effects from a Single Image: Deep Architectures and Ground-Truth Generation"
+    moved_to: Data Scientist at Roche
+    personal_website: https://www.linkedin.com/in/hasial/
+
+  - first_name: Bojana
+    last_name: Gajić
+    position: PhD 
+    year: 2021
+    thesis_title: Training Strategies for Efficient Deep Image Retrieval
+    moved_to: Applied Scientist at Amazon & Adjunt Professor at ESADE
+    personal_website: https://www.linkedin.com/in/bojana-gajic/
+
+  - first_name: Ivet
+    last_name: Rafegas
+    position: PhD 
+    year: 2017
+    thesis_title: Color in Visual Recognition, from flat to deep representations and some biological parallelisms
+    moved_to: Data Scientist Co-Manager at BonÀrea
+    personal_website: https://www.linkedin.com/in/ivetrafegas/
+
+  - first_name: Marc
+    last_name: Serra
+    position: PhD 
+    year: 2015
+    thesis_title: Modeling, Estimation and Evaluation of Intrinsic Images Considering Color Information
+    moved_to: Head of AI at Kleinanzeigen & Assistant Professor at UOC
+    personal_website: https://www.linkedin.com/in/marc-serra-vidal-8bba19101/
+
+  - first_name: Naila
+    last_name: Murray
+    position: PhD
+    year: 2012
+    thesis_title: "Predicting Saliency and Aesthetics in Images: A Bottom-up Perspective"
+    moved_to: Director, AI Research at Meta
+    personal_website: https://www.linkedin.com/in/naila-murray-8a5b9a7/
+
+  - first_name: Javier
+    last_name: Vazquez-Corral
+    position: PhD 
+    year: 2011
+    thesis_title: Colour Constancy in Natural Images Through Colour Naming and Sensor Sharpening
+    moved_to: Associate Professor in our group!
+    personal_website: https://jvazquezcorral.github.io/
+    
+  - first_name: Fahad
+    last_name: Khan
+    position: PhD 
+    year: 2011
+    thesis_title: Coloring Bag-of-Words Based Image Representations
+    moved_to: Lead Scientist at Inception Institute of AI & Associate Professor at Linköping University
+    personal_website: https://sites.google.com/view/fahadkhans/home
+
+  - first_name: Eduard
+    last_name: Vazquez
+    position: PhD 
+    year: 2010
+    thesis_title: Unsupervised Image Segmentation Based on Material Reflectance Description and Saliency	
+    moved_to: Co-Founder and CTO at Fogsphere
+    personal_website: https://www.linkedin.com/in/vazquezeduard/?originalSubdomain=uk
+
+  - first_name: Francesc
+    last_name: Tous
+    position: PhD 
+    year: 2010
+    thesis_title: Unsupervised Image Segmentation Based on Material Reflectance Description and Saliency	
+    moved_to: Software Engineer at Apple
+    personal_website: https://www.linkedin.com/in/francesc-tous-73514814/
 
 other_alumni:
   - first_name: Maria
     last_name: Pilligua
-    position: Undergrad intern 
-    year: 2022-2025
+    position: Undergrad intern
+    year: "2022-2025"
     moved_to: MSc at EPFL
     personal_website: https://mpilligua.github.io/
 
   - first_name: Josep M.
     last_name: Rocafort
-    position: Undergrad intern 
-    year: 2024-2025
+    position: Undergrad intern
+    year: "2024-2025"
 
   - first_name: Abril
     last_name: Piñol
     position: MSc intern
     moved_to: Phd in our group!
-    year: 2024-2025
+    year: "2024-2025"
 
   - first_name: Adrián
     last_name: García
     position: Undergrad intern
-    year: 2024-2025
+    year: "2024-2025"
     moved_to: MSc at École Polytechnique
 
   - first_name: Pai

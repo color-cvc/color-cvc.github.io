@@ -1,11 +1,12 @@
 ---
 layout: page
 title: ISR and RSR
-description: Relighting from a Single Image. Datasets and Deep Intrinsic-based Architecture
+description: Relighting from a Single Image. Datasets and Deep Intrinsic-based Architecture, IEEE TMM 2025
 img: assets/img/datasets/relighting-single-image/teaser.gif
 importance: 1
 category: work
 related_publications: true
+date: 05-2025
 ---
 
 Single image scene relighting aims to generate a realistic new version of an input image so that it appears to be illuminated by a new target light condition. In our paper: "<a href='https://arxiv.org/abs/2409.18770'>Relighting from a Single Image: Datasets and Deep Intrinsic-based Architecture</a>", we propose two new datasets: a synthetic dataset with the ground truth of intrinsic components (ISR) and a real dataset collected under laboratory conditions (RSR).

@@ -1,64 +1,20 @@
 ---
 ---
 <div class="row">
-  {% if site.enable_publication_thumbnails %}
-    <div class="col col-sm-2 abbr">
-      {%- if entry.abbr -%}
-        {%- if site.data.venues[entry.abbr] -%}
-          {% assign venue_style = null %}
-          {% if site.data.venues[entry.abbr].color != blank %}
-            {% assign venue_style = site.data.venues[entry.abbr].color | prepend: 'style="background-color:' | append: '"' %}
-          {%- endif -%}
-          <abbr
-            class="badge rounded w-100"
-            {% if venue_style %}
-              {{ venue_style }}
-            {% endif -%}
-          >
-            {% if site.data.venues[entry.abbr].url %}
-              <a href="{{ site.data.venues[entry.abbr].url }}">{{ entry.abbr }}</a>
-            {% else %}
-              <div>{{- entry.abbr -}}</div>
-            {% endif %}
-          </abbr>
-        {% else %}
-          <abbr class="badge rounded w-100">{{ entry.abbr }}</abbr>
-        {% endif %}
-      {% endif %}
-      {% if entry.preview %}
-        {% if entry.preview contains '://' %}
-          <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
-        {% else %}
-          {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
-          {%
-            include figure.liquid
-            loading="eager"
-            path=entry_path
-            sizes = "200px"
-            class="preview z-depth-1 rounded"
-            zoomable=true
-            alt=entry.preview
-          %}
-        {% endif %}
-      {% endif %}
-    </div>
-  {% endif %}
-
   <!-- Entry bib key -->
-  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-8{% else %}col-sm-10{% endif %}">
+  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-10{% else %}col-sm-12{% endif %}">
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
     <!-- Author -->
     <div class="author">
       {% assign author_array_size = entry.author_array | size %}
 
+      {%- comment -%} Show all authors (no limit) {%- endcomment -%}
       {% assign author_array_limit = author_array_size %}
-      {% if site.max_author_limit and author_array_size > site.max_author_limit %}
-        {% assign author_array_limit = site.max_author_limit %}
-      {% endif %}
 
-      {%- for author in entry.author_array limit: author_array_limit -%}
+      {%- for author in entry.author_array -%}
         {% assign author_is_self = false %}
+        {% assign author_is_team_member = false %}
         {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
         {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
         {% if site.scholar.last_name contains author_last_name %}
@@ -66,6 +22,51 @@
             {% assign author_is_self = true %}
           {% endif %}
         {%- endif -%}
+
+        {%- comment -%} Check if author is a team member (current or alumni) {%- endcomment -%}
+        {%- assign clean_author_last = author_last_name | downcase | remove_accents -%}
+        {%- assign clean_author_first = author.first | downcase | remove_accents -%}
+
+        {%- comment -%} Check current team members {%- endcomment -%}
+        {%- for team_member in site.data.team.current -%}
+          {%- assign clean_team_last = team_member.last_name | downcase | remove_accents -%}
+          {%- assign clean_team_first = team_member.first_name | downcase | remove_accents -%}
+          {%- if clean_author_last == clean_team_last -%}
+            {%- if clean_author_first contains clean_team_first or clean_team_first contains clean_author_first -%}
+              {% assign author_is_team_member = true %}
+              {% break %}
+            {%- endif -%}
+          {%- endif -%}
+        {%- endfor -%}
+
+        {%- comment -%} Check PhD alumni {%- endcomment -%}
+        {%- unless author_is_team_member -%}
+          {%- for alumni in site.data.team.phd_alumni -%}
+            {%- assign clean_alumni_last = alumni.last_name | downcase | remove_accents -%}
+            {%- assign clean_alumni_first = alumni.first_name | downcase | remove_accents -%}
+            {%- if clean_author_last == clean_alumni_last -%}
+              {%- if clean_author_first contains clean_alumni_first or clean_alumni_first contains clean_author_first -%}
+                {% assign author_is_team_member = true %}
+                {% break %}
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endunless -%}
+
+        {%- comment -%} Check other alumni {%- endcomment -%}
+        {%- unless author_is_team_member -%}
+          {%- for alumni in site.data.team.other_alumni -%}
+            {%- assign clean_alumni_last = alumni.last_name | downcase | remove_accents -%}
+            {%- assign clean_alumni_first = alumni.first_name | downcase | remove_accents -%}
+            {%- if clean_author_last == clean_alumni_last -%}
+              {%- if clean_author_first contains clean_alumni_first or clean_alumni_first contains clean_author_first -%}
+                {% assign author_is_team_member = true %}
+                {% break %}
+              {%- endif -%}
+            {%- endif -%}
+          {%- endfor -%}
+        {%- endunless -%}
+
         {% assign coauthor_url = null %}
         {%- assign clean_last_name = author_last_name | downcase | remove_accents -%}
         {% if site.data.coauthors[clean_last_name] %}
@@ -77,16 +78,25 @@
           {% endfor %}
         {%- endif -%}
 
-        {%- if forloop.length > 1 -%}
-          {% if forloop.first == false %},&nbsp;{% endif %}
-          {%- if forloop.last and author_array_limit == author_array_size %}and&nbsp;{% endif -%}
-        {% endif %}
         {%- if author_is_self -%}
-          <em>
+          <span style="white-space: nowrap;"><em>
             {{- author.first }}
             {{ author_last_html -}}
-          </em>
+          </em></span>
+        {%- elsif author_is_team_member -%}
+          <span style="white-space: nowrap;"><strong>
+            {%- if coauthor_url -%}
+              <a href="{{ coauthor_url }}">
+                {{- author.first }}
+                {{ author_last_html -}}
+              </a>
+            {%- else -%}
+              {{- author.first }}
+              {{ author_last_html -}}
+            {%- endif -%}
+          </strong></span>
         {%- else -%}
+          <span style="white-space: nowrap;">
           {%- if coauthor_url -%}
             <a href="{{ coauthor_url }}">
               {{- author.first }}
@@ -96,43 +106,21 @@
             {{- author.first }}
             {{ author_last_html -}}
           {% endif %}
+          </span>
+        {%- endif -%}
+        {%- if forloop.last == false -%}
+          {%- assign next_index = forloop.index | plus: 1 -%}
+          {%- if next_index == author_array_limit -%}
+            {%- if forloop.length == 2 -%}
+              &nbsp;and&nbsp;
+            {%- else -%}
+              ,&nbsp;and&nbsp;
+            {%- endif -%}
+          {%- else -%}
+            ,&nbsp;
+          {%- endif -%}
         {%- endif -%}
       {% endfor %}
-      {%- assign more_authors = author_array_size | minus: author_array_limit -%}
-
-      {%- assign more_authors_hide = more_authors | append: ' more author' -%}
-      {% if more_authors > 0 %}
-        {%- if more_authors > 1 -%}
-          {% assign more_authors_hide = more_authors_hide | append: 's' %}
-        {%- endif -%}
-        {% assign more_authors_show = '' %}
-        {%- for author in entry.author_array offset: author_array_limit -%}
-          {% assign more_authors_show = more_authors_show | append: author.first | append: ' ' | append: author.last %}
-          {% unless forloop.last %}
-            {% assign more_authors_show = more_authors_show | append: ', ' %}
-          {% endunless %}
-        {%- endfor -%}
-        {%- assign more_authors_show = more_authors_show | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
-        , and
-        <span
-          class="more-authors"
-          title="click to view {{ more_authors_hide }}"
-          onclick="
-              var element = $(this);
-              element.attr('title', '');
-              var more_authors_text = element.text() == '{{ more_authors_hide }}' ? '{{ more_authors_show }}' : '{{ more_authors_hide }}';
-              var cursorPosition = 0;
-              var textAdder = setInterval(function(){
-                element.html(more_authors_text.substring(0, cursorPosition + 1));
-                if (++cursorPosition == more_authors_text.length){
-                  clearInterval(textAdder);
-                }
-            }, '{{ site.more_authors_animation_delay }}');
-          "
-        >
-          {{- more_authors_hide -}}
-        </span>
-      {% endif %}
       {% if entry.annotation %}
         <i
           class="fa-solid fa-circle-info ml-1"
@@ -149,9 +137,37 @@
     {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
     {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
     {% if entry.type == 'article' %}
-      {% capture entrytype %}<em>{{ entry.journal }}</em>{% endcapture %}
+      {%- comment -%} Check if journal has an acronym in venues.yml {%- endcomment -%}
+      {%- assign venue_acronym = null -%}
+      {%- for venue_data in site.data.venues -%}
+        {%- assign venue_key = venue_data[0] -%}
+        {%- assign venue_info = venue_data[1] -%}
+        {%- if venue_info.full_name == entry.journal -%}
+          {%- assign venue_acronym = venue_key -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if venue_acronym -%}
+        {% capture entrytype %}<em>{{ venue_acronym }}</em>{% endcapture %}
+      {%- else -%}
+        {% capture entrytype %}<em>{{ entry.journal }}</em>{% endcapture %}
+      {%- endif -%}
     {% elsif proceedings contains entry.type %}
-      {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
+      {%- comment -%} Check if booktitle has an acronym in venues.yml {%- endcomment -%}
+      {%- assign venue_acronym = null -%}
+      {%- for venue_data in site.data.venues -%}
+        {%- assign venue_key = venue_data[0] -%}
+        {%- assign venue_info = venue_data[1] -%}
+        {%- if venue_info.full_name == entry.booktitle -%}
+          {%- assign venue_acronym = venue_key -%}
+          {%- break -%}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- if venue_acronym -%}
+        {% capture entrytype %}<em>{{ venue_acronym }}</em>{% endcapture %}
+      {%- else -%}
+        {% capture entrytype %}<em>In {{ entry.booktitle }}</em>{% endcapture %}
+      {%- endif -%}
     {% elsif thesis contains entry.type %}
       {% capture entrytype %}<em>{{ entry.school }}</em>{% endcapture %}
     {% else %}
@@ -342,4 +358,26 @@
       </div>
     {% endif %}
   </div>
+
+  <!-- Image column on the right -->
+  {% if site.enable_publication_thumbnails %}
+    <div class="col col-sm-2">
+      {% if entry.preview %}
+        {% if entry.preview contains '://' %}
+          <img class="preview rounded" src="{{ entry.preview }}">
+        {% else %}
+          {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
+          {%
+            include figure.liquid
+            loading="eager"
+            path=entry_path
+            sizes = "200px"
+            class="preview rounded"
+            zoomable=true
+            alt=entry.preview
+          %}
+        {% endif %}
+      {% endif %}
+    </div>
+  {% endif %}
 </div>

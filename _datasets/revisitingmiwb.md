@@ -1,11 +1,12 @@
 ---
 layout: page
 title: sRGB-LSMI
-description: Revisiting Image Fusion for Multi-Illuminant White-Balance Correction
+description: Revisiting Image Fusion for Multi-Illuminant White-Balance Correction, ICCV 2025
 img: assets/img/datasets/revisitingmiwb/iccv25_revisitingmiwb.jpg
 importance: 1
 category: work
 related_publications: true
+date: 10-2025
 ---
 
 White balance (WB) correction in scenes with multiple illuminants remains a persistent challenge in computer vision. Recent methods explored fusion-based approaches, where a neural network linearly blends multiple sRGB versions of an input image, each processed with predefined WB presets. In this paper, we demonstrate that linear blending is inherently constrained, propose a new method to blend the WB presets, and introduce a new dataset: sRGB-LSMI.

@@ -35,7 +35,7 @@ $max-content-width: {{ site.max_width }};
 }
 
 h1, h2, h3, h4, h5, h6, .navbar-brand {
-  font-family: 'Monoska', sans-serif;
+  font-family: 'Monoska', 'Helvetica Neue', 'Arial', 'Segoe UI', sans-serif;
 }
 
 /* Post headers */
@@ -139,10 +139,63 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 //   color: var(--global-hover-color); /* slightly darker red on hover */
 // }
 
-/* Ensure child elements don’t reset the color */
+/* Ensure child elements don't reset the color */
 .person-card.has-link h6,
 .person-card.has-link p,
 .person-card.has-link span {
   color: inherit;        /* inherit red from parent */
   text-decoration: none; /* never underline */
+}
+
+/* Alumni section */
+.alumni-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.alumni-section h2 {
+  border-bottom: 2px solid var(--global-theme-color);
+  padding-bottom: 0.5rem;
+}
+
+.alumni-section h3 {
+  font-size: 1.3rem;
+  color: var(--global-text-color);
+}
+
+.alumni-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.alumni-item {
+  padding: 0.75rem 0;
+  border-bottom: 1px solid var(--global-divider-color, #e0e0e0);
+  line-height: 1.6;
+}
+
+.alumni-item:last-child {
+  border-bottom: none;
+}
+
+.alumni-item strong {
+  font-size: 1.05rem;
+  color: var(--global-text-color);
+}
+
+.alumni-item a {
+  color: var(--global-theme-color);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.alumni-item a:hover {
+  color: var(--global-hover-color);
+  text-decoration: underline;
+}
+
+.alumni-item em {
+  color: var(--text-muted, #666);
+  font-size: 0.95rem;
 }
