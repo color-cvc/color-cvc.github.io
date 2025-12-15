@@ -41,8 +41,37 @@ The dataset can be downloaded separately by:
 
 [Nikon Split - 4K (Soon - We are figuring out how to store it.)]()
 
-## References
+<!-- Citation -->
+<div class="citation" id="citation" style="margin-top: 3rem;">
+  <h2>Citation</h2>
+  <p>If you find this work useful for your research, please cite our paper:</p>
+  <pre style="background-color: #f5f5f5; padding: 1rem; border-radius: 5px; overflow-x: auto;">
+<code>@inproceedings{serrano2025revisiting,
+    author    = {Serrano-Lozano, David and Arora, Aditya and Herranz, Luis and Derpanis, Konstantinos G. and Brown, Michael S. and Vazquez-Corral, Javier},
+    title     = {Revisiting Image Fusion for Multi-Illuminant White-Balance Correction},
+    booktitle = {Proceedings of the IEEE/CVF International Conference on Computer Vision (ICCV)},
+    year      = {2025},
+    pages     = {8275-8284}
+}</code></pre>
 
+<p>Also, if you use our dataset, please cite the oriignal LSMI dataset:</p>
+  <pre style="background-color: #f5f5f5; padding: 1rem; border-radius: 5px; overflow-x: auto;">
+<code>@inproceedings{kim2021large,
+  title={Large scale multi-illuminant (lsmi) dataset for developing white balance algorithm under mixed illumination},
+  author={Kim, Dongyoung and Kim, Jinwoo and Nam, Seonghyeon and Lee, Dongwoo and Lee, Yeonkyung and Kang, Nahyup and Lee, Hyong-Euk and Yoo, ByungIn and Han, Jae-Joon and Kim, Seon Joo},
+  booktitle={Proceedings of the IEEE/CVF International Conference on Computer Vision},
+  pages={2410--2419},
+  year={2021}
+}</code></pre>
+</div>
+
+<!-- Acknowledgments (Optional) -->
+<div class="acknowledgments" style="margin-top: 3rem;">
+  <h2>Acknowledgments</h2>
+  <p>
+    This work was partialy supported by grants PID2021-128178OB-I00, PID2024-162555OB-I00 funded by MCIN/AEI/10.13039/501100011033 and by ERDF/EU, and by the Generalitat de Catalunya — Departament de Recerca i Universitats with reference 2021SGR01499 and CERCA Program. DSL also acknowledges the FPI grant from the Spanish Ministry of Science and Innovation (PRE2022-101525). LH was also supported by the Ramon y Cajal grant RYC2019-027020-I. This work was also partially supported by the grant C`atedra ENIA UAB-Cru ̈ılla (TSI-100929-2023-2) from the Ministry of Economic Affairs and Digital Transition of Spain. This work was funded in part by the CFREF (VISTA) program, an NSERC Discovery Grants, and the Canada Research Chair program.
+  </p>
+</div>
 
 
 
