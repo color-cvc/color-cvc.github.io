@@ -55,6 +55,17 @@ ninja.data = [{
           window.open("https://blog.google/technology/ai/google-gemini-update-flash-ai-assistant-io-2024/", "_blank");
         
       },
+    },{id: "post-displaying-external-posts-on-your-al-folio-blog",
+      
+        title: 'Displaying External Posts on Your al-folio Blog <svg width="1.2rem" height="1.2rem" top=".5rem" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="#999" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>',
+      
+      description: "",
+      section: "Posts",
+      handler: () => {
+        
+          window.open("https://medium.com/@al-folio/displaying-external-posts-on-your-al-folio-blog-b60a1d241a0a?source=rss-17feae71c3c4------2", "_blank");
+        
+      },
     },{id: "books-the-godfather",
           title: 'The Godfather',
           description: "",
@@ -65,16 +76,16 @@ ninja.data = [{
           description: "Relighting from a Single Image. Datasets and Deep Intrinsic-based Architecture, IEEE TMM 2025",
           section: "Datasets",handler: () => {
               window.location.href = "/datasets/relighting_from_image/";
-            },},{id: "datasets-srgb-lsmi",
-          title: 'sRGB-LSMI',
-          description: "Revisiting Image Fusion for Multi-Illuminant White-Balance Correction, ICCV 2025",
-          section: "Datasets",handler: () => {
-              window.location.href = "/datasets/revisitingmiwb/";
             },},{id: "datasets-mill",
           title: 'MILL',
           description: "Evaluating Low-Light Image Enhancement Across Multiple Intensity Levels, 2025",
           section: "Datasets",handler: () => {
               window.location.href = "/datasets/mill/";
+            },},{id: "datasets-srgb-lsmi",
+          title: 'sRGB-LSMI',
+          description: "Revisiting Image Fusion for Multi-Illuminant White-Balance Correction, ICCV 2025",
+          section: "Datasets",handler: () => {
+              window.location.href = "/datasets/revisitingmiwb/";
             },},{id: "news-relighting-from-a-single-image-datasets-and-deep-intrinsic-based-architecture-has-been-accepted-in-ieee-transactions-on-multimedia",
           title: 'Relighting from a Single Image: Datasets and Deep Intrinsic-based Architecture has been accepted...',
           description: "",
@@ -101,6 +112,11 @@ ninja.data = [{
           description: "",
           section: "Project_pages",handler: () => {
               window.location.href = "/mill/";
+            },},{id: "project_pages-srgb-lsmi",
+          title: 'sRGB-LSMI',
+          description: "Revisiting Image Fusion for Multi-Illuminant White-Balance Correction, ICCV 2025",
+          section: "Project_pages",handler: () => {
+              window.location.href = "/revisitingmiwb/";
             },},{
         id: 'social-email',
         title: 'email',
