@@ -5,7 +5,9 @@ permalink: /mill/
 img: assets/img/mill/teaser.jpg
 paper: https://arxiv.org/abs/2511.15496
 code:
-date: 2025-11-25
+date: 2025-11-01
+dataset: true
+hide_navbar: true
 ---
 
 <div class="project-page">
@@ -224,13 +226,6 @@ updateImage();
 .project-page {
   max-width: 900px;
   margin: 0 auto;
-}
-
-/* Override title styling */
-.post-title, .page-heading, h1.post-title {
-  font-family: 'Helvetica Neue', Arial, sans-serif !important;
-  font-size: 1.5rem !important;
-  font-weight: 500 !important;
 }
 
 .authors {

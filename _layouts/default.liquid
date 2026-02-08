@@ -16,12 +16,19 @@
   </head>
 
   <!-- Body -->
-  <body class="{% if site.navbar_fixed %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
+  {% assign show_navbar = true %}
+  {% if page.hide_navbar or layout.hide_navbar %}
+    {% assign show_navbar = false %}
+  {% endif %}
+
+  <body class="{% if site.navbar_fixed and show_navbar %}fixed-top-nav{% endif %} {% unless site.footer_fixed %}sticky-bottom-footer{% endunless %}">
     <!-- Header -->
-    {% include header.liquid %}
+    {% if show_navbar %}
+      {% include header.liquid %}
+    {% endif %}
 
     <!-- Content -->
-    <div class="container mt-5" role="main">
+    <div class="container {% if show_navbar %}mt-5{% else %}mt-4{% endif %}" role="main">
       {% if page.toc and page.toc.sidebar %}
         {% if page.toc.sidebar == 'right' %}
           <div class="row">

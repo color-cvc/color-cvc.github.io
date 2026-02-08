@@ -24,18 +24,26 @@ $max-content-width: {{ site.max_width }};
   "tabler-icons/tabler-icons-outline.scss"
 ;
 
-// 👇 Custom font override
+// 👇 Custom fonts
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap');
+
 @font-face {
   font-family: 'Monoska';
-  src: url('/assets/fonts/monoska.woff2') format('woff2'),
-       url('/assets/fonts/monoska.woff') format('woff'),
-       url('/assets/fonts/monoska.ttf') format('truetype');
+  src: url('/assets/fonts/Monoska.woff2') format('woff2'),
+       url('/assets/fonts/Monoska.woff') format('woff'),
+       url('/assets/fonts/Monoska.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
 
-h1, h2, h3, h4, h5, h6, .navbar-brand {
+.navbar-brand {
   font-family: 'Monoska', 'Helvetica Neue', 'Arial', 'Segoe UI', sans-serif;
+}
+
+/* Page titles and section headings use Raleway */
+.post-title, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
+  font-weight: 600;
 }
 
 /* Post headers */
@@ -45,6 +53,11 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 
 .post-header .post-title {
   margin-bottom: 0.25em;
+}
+
+/* About page main title uses Monoska */
+.post-title.about-title {
+  font-family: 'Monoska', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 .post-header .post-description {
@@ -95,12 +108,14 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
   line-height: 1.2;
   color: var(--global-text-color);
   font-weight: 600;
+  font-family: 'Monoska', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 /* Position */
 .person-card .position {
   font-style: italic;
   color: var(--text-muted);
+  font-family: 'Monoska', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 /* Email */
@@ -182,6 +197,7 @@ h1, h2, h3, h4, h5, h6, .navbar-brand {
 .alumni-item strong {
   font-size: 1.05rem;
   color: var(--global-text-color);
+  font-family: 'Monoska', 'Helvetica Neue', 'Arial', sans-serif;
 }
 
 .alumni-item a {

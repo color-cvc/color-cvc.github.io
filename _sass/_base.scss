@@ -730,6 +730,7 @@ footer.sticky-bottom {
 
 .publications {
   margin-top: 2rem;
+  font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
 
   h1 {
     color: var(--global-theme-color);
@@ -770,6 +771,9 @@ footer.sticky-bottom {
       }
 
       .preview {
+        width: 100%;
+        height: auto;
+        display: block;
       }
 
       .abbr {
@@ -839,6 +843,10 @@ footer.sticky-bottom {
         > em {
           border-bottom: 1px solid;
           font-style: normal;
+        }
+
+        > span strong {
+          font-weight: 800;
         }
 
         > span.more-authors {
@@ -940,6 +948,7 @@ footer.sticky-bottom {
 // Datasets Section (styled like publications)
 .datasets {
   margin-top: 2rem;
+  font-family: 'Raleway', 'Helvetica Neue', 'Arial', sans-serif;
 
   ol.dataset-list {
     list-style: none;

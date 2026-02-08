@@ -1,8 +1,30 @@
 ---
 ---
-<div class="row">
+<div class="row align-items-center">
+  <!-- Image column on the left -->
+  {% if site.enable_publication_thumbnails %}
+    <div class="col-sm-3 mb-2 mb-sm-0">
+      {% if entry.preview %}
+        {% if entry.preview contains '://' %}
+          <img class="preview rounded" src="{{ entry.preview }}">
+        {% else %}
+          {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
+          {%
+            include figure.liquid
+            loading="eager"
+            path=entry_path
+            sizes="200px"
+            class="preview rounded"
+            zoomable=true
+            alt=entry.preview
+          %}
+        {% endif %}
+      {% endif %}
+    </div>
+  {% endif %}
+
   <!-- Entry bib key -->
-  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-10{% else %}col-sm-12{% endif %}">
+  <div id="{{ entry.key }}" class="{% if site.enable_publication_thumbnails %}col-sm-9{% else %}col-sm-12{% endif %}">
     <!-- Title -->
     <div class="title">{{ entry.title }}</div>
     <!-- Author -->
@@ -105,7 +127,7 @@
           {%- else -%}
             {{- author.first }}
             {{ author_last_html -}}
-          {% endif %}
+          {%- endif -%}
           </span>
         {%- endif -%}
         {%- if forloop.last == false -%}
@@ -358,26 +380,4 @@
       </div>
     {% endif %}
   </div>
-
-  <!-- Image column on the right -->
-  {% if site.enable_publication_thumbnails %}
-    <div class="col col-sm-2">
-      {% if entry.preview %}
-        {% if entry.preview contains '://' %}
-          <img class="preview rounded" src="{{ entry.preview }}">
-        {% else %}
-          {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
-          {%
-            include figure.liquid
-            loading="eager"
-            path=entry_path
-            sizes = "200px"
-            class="preview rounded"
-            zoomable=true
-            alt=entry.preview
-          %}
-        {% endif %}
-      {% endif %}
-    </div>
-  {% endif %}
 </div>
