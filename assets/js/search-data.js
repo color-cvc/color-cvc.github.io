@@ -71,21 +71,6 @@ ninja.data = [{
           description: "",
           section: "Books",handler: () => {
               window.location.href = "/books/the_godfather/";
-            },},{id: "datasets-isr-and-rsr",
-          title: 'ISR and RSR',
-          description: "Relighting from a Single Image. Datasets and Deep Intrinsic-based Architecture, IEEE TMM 2025",
-          section: "Datasets",handler: () => {
-              window.location.href = "/datasets/relighting_from_image/";
-            },},{id: "datasets-mill",
-          title: 'MILL',
-          description: "Evaluating Low-Light Image Enhancement Across Multiple Intensity Levels, 2025",
-          section: "Datasets",handler: () => {
-              window.location.href = "/datasets/mill/";
-            },},{id: "datasets-srgb-lsmi",
-          title: 'sRGB-LSMI',
-          description: "Revisiting Image Fusion for Multi-Illuminant White-Balance Correction, ICCV 2025",
-          section: "Datasets",handler: () => {
-              window.location.href = "/datasets/revisitingmiwb/";
             },},{id: "news-relighting-from-a-single-image-datasets-and-deep-intrinsic-based-architecture-has-been-accepted-in-ieee-transactions-on-multimedia",
           title: 'Relighting from a Single Image: Datasets and Deep Intrinsic-based Architecture has been accepted...',
           description: "",
@@ -104,22 +89,24 @@ ninja.data = [{
           section: "News",},{id: "news-javier-has-been-awarded-a-leonardo-grant-from-the-bbva-foundation-congratulations",
           title: 'Javier has been awarded a Leonardo Grant from the BBVA Foundation.. Congratulations!',
           description: "",
-          section: "News",},{id: "news-welcome-to-our-new-phd-student-abril-pinyol-also-we-are-pleased-to-welcome-luca-cogo-and-youchen-liu-who-will-visit-our-lab-for-6-and-17-months-respectively",
-          title: 'Welcome to our new PhD student: Abril Pinyol! Also, we are pleased to...',
+          section: "News",},{id: "news-we-are-pleased-to-welcome-luca-cogo-and-youchen-liu-who-will-visit-our-lab-for-6-and-17-months-respectively",
+          title: 'We are pleased to welcome Luca Cogo and Youchen Liu, who will visit...',
           description: "",
-          section: "News",},{id: "news-danna-xue-presented-hypernvd-at-deep-learning-bcn-2025-check-out-the-video-david-alex-and-javier-presented-their-works-in-the-poster-sessions",
-          title: 'Danna Xue presented HyperNVD at Deep Learning BCN 2025. Check out the video....',
+          section: "News",},{id: "project_pages-relighting-from-a-single-image-datasets-and-deep-intrinsic-based-architecture",
+          title: 'Relighting from a Single Image. Datasets and Deep Intrinsic-based Architecture',
           description: "",
-          section: "News",},{id: "project_pages-evaluating-low-light-image-enhancement-across-multiple-intensity-levels",
+          section: "Project_pages",handler: () => {
+              window.location.href = "/relighting_from_image/";
+            },},{id: "project_pages-revisiting-image-fusion-for-multi-illuminant-white-balance-correction",
+          title: 'Revisiting Image Fusion for Multi-Illuminant White-Balance Correction',
+          description: "",
+          section: "Project_pages",handler: () => {
+              window.location.href = "/revisitingmiwb/";
+            },},{id: "project_pages-evaluating-low-light-image-enhancement-across-multiple-intensity-levels",
           title: 'Evaluating Low-Light Image Enhancement Across Multiple Intensity Levels',
           description: "",
           section: "Project_pages",handler: () => {
               window.location.href = "/mill/";
-            },},{id: "project_pages-srgb-lsmi",
-          title: 'sRGB-LSMI',
-          description: "Revisiting Image Fusion for Multi-Illuminant White-Balance Correction, ICCV 2025",
-          section: "Project_pages",handler: () => {
-              window.location.href = "/revisitingmiwb/";
             },},{
         id: 'social-email',
         title: 'email',
