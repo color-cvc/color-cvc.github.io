@@ -11,7 +11,7 @@ footer_text: >
   The webpage is based on the <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
 keywords: Color Group, Computer Vision Center, Barcelona # add your own keywords or leave empty
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
-icon: prism.jpg # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
+icon: icon.ico # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://color-cvc.github.io # the base hostname & protocol for your site
 baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
