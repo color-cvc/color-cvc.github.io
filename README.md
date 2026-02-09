@@ -1,6 +1,6 @@
 # Color Group @ CVC — Website
 
-This is the source code for the [Color Group @ CVC](https://color-cvc.github.io) website. It is built with [Jekyll](https://jekyllrb.com/) using a customized version of the [al-folio](https://github.com/alshedivat/al-folio) theme.
+This is the source code for the [Color Group @ CVC](https://color.cvc.uab.cat) website. It is built with [Jekyll](https://jekyllrb.com/) using a customized version of the [al-folio](https://github.com/alshedivat/al-folio) theme.
 
 ---
 
@@ -43,9 +43,7 @@ Then open [http://127.0.0.1:4000](http://127.0.0.1:4000) in your browser.
 
 ## How Deployment Works
 
-The site is **automatically deployed** via GitHub Actions every time you push to `main`. You don't need to do anything special — just push your changes and the site will update in a few minutes.
-
-The workflow is defined in `.github/workflows/deploy.yml`. It installs dependencies, builds the Jekyll site, and deploys it to GitHub Pages.
+The site is **automatically deployed** on the CVC website. One of the servers in the CVC pulls this repo every day to check for updates. Then it updates [https://color.cvc.uab.cat](https://color.cvc.uab.cat) accordingly.
 
 ---
 
