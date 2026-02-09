@@ -111,7 +111,7 @@ ninja.data = [{
           title: 'Diffusion-Based Low-Light Image Enhancement with Color and Luminance Priors',
           description: "",
           section: "Project_pages",handler: () => {
-              window.location.href = "/sca/";
+              window.location.href = "/scem/";
             },},{
         id: 'social-email',
         title: 'email',
