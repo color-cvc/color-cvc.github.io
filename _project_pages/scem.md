@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Diffusion-Based Low-Light Image Enhancement with Color and Luminance Priors"
-permalink: /sca/
+permalink: /scem/
 img: assets/img/mill/teaser.jpg
 # paper: https://arxiv.org/abs/2511.15496
 # code:
